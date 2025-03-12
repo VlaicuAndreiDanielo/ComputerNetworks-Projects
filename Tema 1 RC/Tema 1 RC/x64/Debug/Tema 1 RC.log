@@ -1,0 +1,7 @@
+﻿  Problema 2.cpp
+C:\Computers\probleme C++\Tema 1 RC\Tema 1 RC\Problema 2.cpp(14,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Computers\probleme C++\Tema 1 RC\Tema 1 RC\Problema 2.cpp(19,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Computers\probleme C++\Tema 1 RC\Tema 1 RC\Problema 2.cpp(111,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Computers\probleme C++\Tema 1 RC\Tema 1 RC\Problema 2.cpp(112,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Computers\probleme C++\Tema 1 RC\Tema 1 RC\Problema 2.cpp(168,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Tema 1 RC.vcxproj -> C:\Computers\probleme C++\Tema 1 RC\x64\Debug\Tema 1 RC.exe
