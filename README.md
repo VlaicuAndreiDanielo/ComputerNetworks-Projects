@@ -3,7 +3,6 @@
 ## Assignment 1 - Two-Dimensional Parity Bits and CRC (Cyclic Redundancy Check)
 
 This assignment contains two main problems illustrating fundamental error detection techniques in computer networks: **two-dimensional parity bits** and **Cyclic Redundancy Check (CRC)**.
-
 ---
 
 ## 🔹 Problem 1: Two-Dimensional Parity Bits
@@ -37,9 +36,64 @@ This assignment contains two main problems illustrating fundamental error detect
 
 ---
 
+## Assignment 2 - Token Passing in a Network
+This code simulates the transmission of a token in a network of 10 computers arranged in a circle. The user can choose the direction of circulation (clockwise or counterclockwise), and the token is moved to a new, randomly chosen source and destination.
+---
+### Main Components:
+
+- **Function `generateRandomIP`**  
+  This function generates a random IP address in the form of four numbers separated by dots. A `set` is used to ensure that each IP address is unique.
+
+- **Class `Computer`**  
+  Each `Computer` object has an identifier (`id`), an IP address (`ip`), and a buffer (`buffer`) that stores the current message. This buffer is displayed to show the state of each computer in the network.
+
+- **Structure `Token`**  
+  The `Token` structure holds information about the token's state:  
+  - `srcIP`: The IP address of the current source computer (the token's location).  
+  - `destIP`: The IP address of the destination to which the message is transmitted.  
+  - `message`: The message that needs to be transmitted.  
+  - `isFree` and `delivered`: Boolean flags that indicate whether the token has returned to the source and whether the message has been delivered to the destination, respectively.
+
+- **Function `printNetworkState`**  
+  This function iterates over the vector of computers and displays the state of each computer (ID, IP address, and the content of the buffer, or `null` if the buffer is empty).
+
+### Main Logic
+
+1. **Network Initialization:**  
+   - A seed is set for the `rand()` function using `time(0)`.
+   - A vector of 10 computers is created, each with a randomly generated IP address and a unique ID (e.g., `C0`, `C1`, etc.).
+
+2. **Choosing the Direction of Circulation:**  
+   - The user selects whether the token will circulate clockwise or counterclockwise.
+
+3. **Entering the Message:**  
+   - The user inputs a test message that will be transmitted across the network.
+
+4. **Simulating Token Transmission (10 Steps):**  
+   - For each step, the buffers of all computers are reset and the network state is displayed.
+   - A new source (`newSrc`) and a destination (`dest`) are randomly selected (ensuring that the destination is different from the source).
+   - **First Iteration:**  
+     - The token is placed directly at the newly chosen source. The variable `current` is set to the source's index, and `token.srcIP` is updated accordingly.
+   - **Subsequent Iterations:**  
+     - If the new source differs from the token's current source address, the token is moved from the old source to the new source. This process is performed using a `while` loop that moves through the computers in the chosen direction and displays the network state at each step.
+   - Once the token reaches the new source, the destination of the token is set, the message is assigned, and the `isFree` and `delivered` flags are reset.
+
+5. **Transmitting the Message:**  
+   - A state mechanism (states 0, 1, and 2) is used to simulate the transmission process:
+     - **State 0:** The token moves toward the destination. Once the destination is reached, the message is marked as delivered (`delivered = true`), and the process moves to state 1.
+     - **State 1:** The token begins returning to the source. If it reaches the new source, the token is marked as free (`isFree = true`), and transmission stops for that step; otherwise, it transitions to state 2.
+     - **State 2:** The token continues its return to the source until it is confirmed to have arrived.
+   
+6. **Updating the Position:**  
+   - After each movement, the `current` index is updated using the formula `(current + direction + n) % n` to maintain the circularity of the network.
+
+This implementation simulates a token-passing process in a network, where the token is moved from one source to another based on a chosen direction, then used to transmit a message from the source to the destination, and finally returns to the source after delivery.
+
+---
 ### 📌 Summary
 
 - **Problem 1**: Displays a **matrix representation** of the message with row and column parity bits, simulates error corruption, and identifies the corrupted position.
 - **Problem 2**: Shows a **step-by-step matrix representation** of the XOR operations and finally displays the **extended message** combined with the remainder from the polynomial division.
+- **Problem 3**: This code simulates the transmission of a token in a network of 10 computers arranged in a circle.
 
-This project demonstrates basic **error detection techniques** used in computer networks.
+This project demonstrates basic **error detection techniques** used in computer networks and a **token simulation in a network**.
