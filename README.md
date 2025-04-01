@@ -94,6 +94,6 @@ This implementation simulates a token-passing process in a network, where the to
 
 - **Problem 1**: Displays a **matrix representation** of the message with row and column parity bits, simulates error corruption, and identifies the corrupted position.
 - **Problem 2**: Shows a **step-by-step matrix representation** of the XOR operations and finally displays the **extended message** combined with the remainder from the polynomial division.
-- **Problem 3**: This code simulates the transmission of a token in a network of 10 computers arranged in a circle.
+- **Problem 3**: This program displays and simulates the transmission of a token in a network of 10 computers arranged in a circle.
 
 This project demonstrates basic **error detection techniques** used in computer networks and a **token simulation in a network**.
