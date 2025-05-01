@@ -90,10 +90,37 @@ This code simulates the transmission of a token in a network of 10 computers arr
 This implementation simulates a token-passing process in a network, where the token is moved from one source to another based on a chosen direction, then used to transmit a message from the source to the destination, and finally returns to the source after delivery.
 
 ---
+
+## Assignment 3 - Sliding Window Protocol
+
+This assignment simulates the **Sliding Window Protocol**, a reliable data transfer technique in networks for efficient and orderly packet transmission.
+
+### Key Features:
+
+- **Customizable Parameters**:
+  - **Number of Packets**: Total packets to be sent.
+  - **Window Size**: Defines how many packets can be sent before waiting for ACKs.
+  - **Packet Loss Chance**: Simulates the probability of packet loss during transmission.
+  - **ACK Loss Chance**: Simulates the probability that an acknowledgment is lost.
+
+### Protocol Logic:
+
+- The sender uses a sliding window and sends packets within the window range.
+- The window slides forward **only when an acknowledgment for the first packet in the window** is received.
+- If any packet or its acknowledgment is lost, a timeout triggers retransmission of that packet.
+- This continues until **all packets are successfully acknowledged**.
+
+### Output:
+
+- The program prints:
+  - The **order in which packets were received**.
+  - The **correctly sorted list of packets**, verifying successful delivery.
+---
 ### 📌 Summary
 
-- **Problem 1**: Displays a **matrix representation** of the message with row and column parity bits, simulates error corruption, and identifies the corrupted position.
-- **Problem 2**: Shows a **step-by-step matrix representation** of the XOR operations and finally displays the **extended message** combined with the remainder from the polynomial division.
-- **Problem 3**: This program displays and simulates the transmission of a token in a network of 10 computers arranged in a circle.
+- **Problem 1.1**: Displays a **matrix representation** of the message with row and column parity bits, simulates error corruption, and identifies the corrupted position.
+- **Problem 1.2**: Shows a **step-by-step matrix representation** of the XOR operations and finally displays the **extended message** combined with the remainder from the polynomial division.
+- **Problem 2**: This program displays and simulates the transmission of a token in a network of 10 computers arranged in a circle.
+- **Problem 3**: This project showcases how the Sliding Window Protocol handles packet and acknowledgment loss while ensuring complete and in-order delivery.
 
 This project demonstrates basic **error detection techniques** used in computer networks and a **token simulation in a network**.
