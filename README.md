@@ -97,7 +97,7 @@ This assignment simulates the **Sliding Window Protocol**, a reliable data trans
 
 ### Key Features:
 
-- **Customizable Parameters**:
+- **Customizable Parameters in code**:
   - **Number of Packets**: Total packets to be sent.
   - **Window Size**: Defines how many packets can be sent before waiting for ACKs.
   - **Packet Loss Chance**: Simulates the probability of packet loss during transmission.
