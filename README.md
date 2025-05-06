@@ -40,7 +40,7 @@ This assignment contains two main problems illustrating fundamental error detect
 ---
 This code simulates the transmission of a token in a network of 10 computers arranged in a circle. The user can choose the direction of circulation (clockwise or counterclockwise), and the token is moved to a new, randomly chosen source and destination.
 
-### Main Components:
+### 📋 Main Components:
 
 - **Function `generateRandomIP`**  
   This function generates a random IP address in the form of four numbers separated by dots. A `set` is used to ensure that each IP address is unique.
@@ -58,7 +58,7 @@ This code simulates the transmission of a token in a network of 10 computers arr
 - **Function `printNetworkState`**  
   This function iterates over the vector of computers and displays the state of each computer (ID, IP address, and the content of the buffer, or `null` if the buffer is empty).
 
-### Main Logic
+### 🔄 Main Logic
 
 1. **Network Initialization:**  
    - A seed is set for the `rand()` function using `time(0)`.
@@ -96,7 +96,7 @@ This implementation simulates a token-passing process in a network, where the to
 
 This assignment simulates the **Sliding Window Protocol**, a reliable data transfer technique in networks for efficient and orderly packet transmission.
 
-### Key Features:
+### 📋 Key Features:
 
 - **Customizable Parameters in code**:
   - **Number of Packets**: Total packets to be sent.
@@ -104,18 +104,47 @@ This assignment simulates the **Sliding Window Protocol**, a reliable data trans
   - **Packet Loss Chance**: Simulates the probability of packet loss during transmission.
   - **ACK Loss Chance**: Simulates the probability that an acknowledgment is lost.
 
-### Protocol Logic:
+### 🔄 Protocol Logic:
 
 - The sender uses a sliding window and sends packets within the window range.
 - The window slides forward **only when an acknowledgment for the first packet in the window** is received.
 - If any packet or its acknowledgment is lost, a timeout triggers retransmission of that packet.
 - This continues until **all packets are successfully acknowledged**.
 
-### Output:
+### 📊 Output:
 
 - The program prints:
   - The **order in which packets were received**.
   - The **correctly sorted list of packets**, verifying successful delivery.
+---
+## Assignment 4 - Encryption Application
+---
+Implements a **client-server** Java application offering two encryption modes using **Diffie–Hellman key exchange**:
+
+1. **Caesar Cipher with Diffie–Hellman**  
+   - **Client** and **Server** agree on a prime `p` and generator `g` (either **randomly generated** by the client or **manually provided**).  
+   - They perform the DH handshake:  
+     - Each side generates a private key `x` and computes `y = g^x mod p`.  
+     - They exchange `y` values and compute the shared secret `K = y_other^x mod p`.  
+   - The **Caesar shift** is `K mod 26`; the client encrypts the message and the server decrypts it.
+
+2. **Columnar Transposition Cipher**  
+   - User provides a **key** consisting of **unique letters**.  
+   - The message is written in rows under the key, padded with `X` if needed.  
+   - Columns are read in **alphabetical order** of the key letters to form the ciphertext.
+
+### 🛠️ Structure:
+
+- **`CryptoUtils.java`**: Utility class for prime generation, primitive root finding, DH operations, and cipher routines.  
+- **`Server.java`**: Waits on port `8888`, handles incoming connections, reads mode, performs DH + Caesar or transposition decryption, and logs results.  
+- **`Client.java`**: Connects to the server, lets the user choose the encryption mode, generates or inputs `p`/`g`, executes DH handshake, encrypts the message, and sends it.
+
+### 🔑 Features:
+
+- **Random or manual DH parameters**: The client may generate `p` of user-specified bit length and find a primitive root, or manually enter valid `p` and `g` (with primality and uniqueness checks).  
+- **Input Validation**: Ensures `p` is prime, `g` is a valid generator, and transposition key has only unique letters.  
+- **Easy Extension**: New algorithms can be added by updating `CryptoUtils` and the menu options.
+
 ---
 ### 📌 Summary
 
@@ -123,5 +152,6 @@ This assignment simulates the **Sliding Window Protocol**, a reliable data trans
 - **Problem 1.2**: Shows a **step-by-step matrix representation** of the XOR operations and finally displays the **extended message** combined with the remainder from the polynomial division.
 - **Problem 2**: This program displays and simulates the transmission of a token in a network of 10 computers arranged in a circle.
 - **Problem 3**: This project showcases how the Sliding Window Protocol handles packet and acknowledgment loss while ensuring complete and in-order delivery.
+- **Problem 4**: Implements a **client-server** Java application offering two encryption modes.
 
 
