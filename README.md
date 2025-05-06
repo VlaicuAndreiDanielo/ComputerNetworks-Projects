@@ -1,9 +1,9 @@
 # ComputerNetworks-Projects
 
 ## Assignment 1 - Two-Dimensional Parity Bits and CRC (Cyclic Redundancy Check)
-
-This assignment contains two main problems illustrating fundamental error detection techniques in computer networks: **two-dimensional parity bits** and **Cyclic Redundancy Check (CRC)**.
 ---
+This assignment contains two main problems illustrating fundamental error detection techniques in computer networks: **two-dimensional parity bits** and **Cyclic Redundancy Check (CRC)**.
+
 
 ## 🔹 Problem 1: Two-Dimensional Parity Bits
 
@@ -37,8 +37,9 @@ This assignment contains two main problems illustrating fundamental error detect
 ---
 
 ## Assignment 2 - Token Passing in a Network
-This code simulates the transmission of a token in a network of 10 computers arranged in a circle. The user can choose the direction of circulation (clockwise or counterclockwise), and the token is moved to a new, randomly chosen source and destination.
 ---
+This code simulates the transmission of a token in a network of 10 computers arranged in a circle. The user can choose the direction of circulation (clockwise or counterclockwise), and the token is moved to a new, randomly chosen source and destination.
+
 ### Main Components:
 
 - **Function `generateRandomIP`**  
