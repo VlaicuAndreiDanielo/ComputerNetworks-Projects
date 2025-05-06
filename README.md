@@ -124,4 +124,4 @@ This assignment simulates the **Sliding Window Protocol**, a reliable data trans
 - **Problem 2**: This program displays and simulates the transmission of a token in a network of 10 computers arranged in a circle.
 - **Problem 3**: This project showcases how the Sliding Window Protocol handles packet and acknowledgment loss while ensuring complete and in-order delivery.
 
-This project demonstrates basic **error detection techniques** used in computer networks and a **token simulation in a network**.
+
