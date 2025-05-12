@@ -1,6 +1,6 @@
-# ComputerNetworks-Projects
+# 🛜 ComputerNetworks-Projects
 
-## Assignment 1 - Two-Dimensional Parity Bits and CRC (Cyclic Redundancy Check)
+## 🛠️ Assignment 1 - Two-Dimensional Parity Bits and CRC (Cyclic Redundancy Check)
 ---
 This assignment contains two main problems illustrating fundamental error detection techniques in computer networks: **two-dimensional parity bits** and **Cyclic Redundancy Check (CRC)**.
 
@@ -36,7 +36,7 @@ This assignment contains two main problems illustrating fundamental error detect
 
 ---
 
-## Assignment 2 - Token Passing in a Network
+## 🛠️ Assignment 2 - Token Passing in a Network
 ---
 This code simulates the transmission of a token in a network of 10 computers arranged in a circle. The user can choose the direction of circulation (clockwise or counterclockwise), and the token is moved to a new, randomly chosen source and destination.
 
@@ -92,7 +92,7 @@ This implementation simulates a token-passing process in a network, where the to
 
 ---
 
-## Assignment 3 - Sliding Window Protocol
+## 🛠️ Assignment 3 - Sliding Window Protocol
 
 This assignment simulates the **Sliding Window Protocol**, a reliable data transfer technique in networks for efficient and orderly packet transmission.
 
@@ -117,7 +117,7 @@ This assignment simulates the **Sliding Window Protocol**, a reliable data trans
   - The **order in which packets were received**.
   - The **correctly sorted list of packets**, verifying successful delivery.
 ---
-## Assignment 4 - Encryption Application
+## 🛠️ Assignment 4 - Encryption Application
 ---
 Implements a **client-server** Java application offering two encryption modes using **Diffie–Hellman key exchange**:
 
